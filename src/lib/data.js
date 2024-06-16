@@ -1,4 +1,4 @@
-import { request } from "http";
+
 import { Post, User } from "./models";
 import { connectToDb } from "./utils"
 

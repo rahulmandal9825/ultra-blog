@@ -30,9 +30,7 @@ function Navlink() {
           <Links item={link} key={link.title}/>
         ))}
       </div>
-      <div className='py-1'>
-      <Links item={{ title: "Login", path: "/login" }} />
-      </div>
+    
     </div>
   )
 }

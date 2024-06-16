@@ -8,7 +8,7 @@ const Links = ({item}) => {
 
   return (
    <Link href={item.path}
-   className={`${pathname === item.path ? "bg-black px-2  self-center transition-colors duration-300 delay-50 ease-in py-1 text-white rounded" : " px-2  py-1"}`}
+   className={`${pathname === item.path ? "bg-black px-3  self-center transition-colors duration-300 delay-50 ease-in py-1  text-white rounded" : " px-2  py-1"}`}
    >
    {item.title}
    </Link>
