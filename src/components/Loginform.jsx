@@ -12,6 +12,7 @@ export const Loginform = () => {
             <input type="text" placeholder='Username' name='username'  className='outline-none'/>
             <input type="password" placeholder='Password' name='password' className='outline-none'/>
             <button className='bg-black w-full text-white p-2 rounded-lg'>Login</button>
+            <h1 className='text-sm text-red-500 self-center'>{state?.error}</h1>
         </form>
 </>
       

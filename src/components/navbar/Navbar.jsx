@@ -1,14 +1,19 @@
+
 import Link from "next/link";
 import React from "react";
 import Navlink from "./Navlink";
-import Swich from "./Swich";
 import Links from "./Links";
 import {auth} from "../../lib/auth";
 import {handleLogout} from "../../lib/actions";
 
+
+
+
+
+
 const Navbar = async () => {
+
     const session = await auth();
-    console.log(session);
     return (
         <div className="p-3 mb-10 flex justify-between shadow-lg rounded-xl mt-3">
             <Link href="/" className="text-xl font-semibold py-1">

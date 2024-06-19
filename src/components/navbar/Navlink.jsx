@@ -16,10 +16,10 @@ const links = [
     title: "About",
     path: "/about",
   },
-  // {
-  //   title: "Contact",
-  //   path: "/contact",
-  // },
+  {
+    title: "Admin",
+    path: "/admin",
+  },
 ];
 
 function Navlink() {

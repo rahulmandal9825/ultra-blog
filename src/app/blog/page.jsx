@@ -5,27 +5,26 @@ import Header from '../../components/Header';
 
 
 
-const getData = async() =>{
-  // const res =await getPosts();
-  const res = await fetch('https://dummyjson.com/posts');
-  if(!res.ok){
-    throw new Error("something went wrong");
-  }
-  return res.json();
-}
+const getData = async () => {
+  const res = await getPosts();
+ 
+  return res;
+};
 
 const Blogpage = async() => {
     const data = await getData();
-    const posts = data.posts
+    const posts = data;
+
 
   return (
     <>
     <Header post={posts[0]}/>
+
     
      <div className='m-10 flex flex-wrap gap-10 '>
-      {posts.map((post) => (
-        <div key={post.id} className='w-[30%] border-2 border-gray-200 shadow-lg rounded-xl' >
-          <PostCard post={post}/>
+      {posts.map((post , index) => (
+        <div key={posts[index].id} className='w-[30%] border-2 border-gray-200 shadow-lg rounded-xl' >
+          <PostCard post={posts[index]}/>
         </div>
         
       ))}

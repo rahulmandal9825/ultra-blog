@@ -1,12 +1,21 @@
 "use client";
 
-import React from 'react'
+import React, { useEffect } from 'react'
 import { signup } from '../lib/actions'
 import { useFormState } from "react-dom";
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+
 
 const Rigister = () => {
     const [state, formAction] = useFormState(signup, 0);
+
+    const router = useRouter();
+
+    useEffect(()=> {
+      state?.success && router.push("/login");
+    }, [state?.success, router]);
+
   return (
     <>
       <form action={formAction} className="flex  flex-col justify-between gap-3 w-full h-[400px] border-2 p-5 rounded-2xl border-gray-300 self-center shadow-xl">

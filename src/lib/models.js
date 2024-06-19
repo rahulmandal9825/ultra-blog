@@ -41,9 +41,12 @@ const PostSchema = new mongoose.Schema(
             type:String,
             required: true,
         },
-        img:{
+        image:{
             type: String,
 
+        },
+        tags:{
+            type: String,
         },
         UserId:{
             type: String,
@@ -51,8 +54,6 @@ const PostSchema = new mongoose.Schema(
         },
         slug:{
             type: String,
-            required: true,
-            unique: true,
         },
     },
     {timestamps: true}

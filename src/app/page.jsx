@@ -4,7 +4,7 @@ import Postform from "../components/Postform"
 export default function Home() {
   return (
     <main className="flex">
-     <Postform/>
+     {/* <Postform/> */}
     </main>
   );
 }

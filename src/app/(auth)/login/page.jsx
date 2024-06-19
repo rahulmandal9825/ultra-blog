@@ -11,7 +11,7 @@ const Loginpage = () => {
             <form action={handleGithublogin} className="">
                 <button className="bg-gray-600 text-white w-full p-2 rounded-lg">Login with Github</button>
             </form>
-            <div className="mt-2"><Link href="/Signup">
+            <div className="m-2"><Link href="/Signup">
         {"Don't have an account?"} <b>Register</b>
       </Link></div>
         </div>
