@@ -1,7 +1,6 @@
-import React from 'react'
-import Links from './Links';
-import Link from 'next/link';
 
+import React from 'react';
+import Links from './Links';
 
 const links = [
   {
@@ -23,16 +22,14 @@ const links = [
 ];
 
 function Navlink() {
+ 
   return (
-    <div className="flex gap-10 ">
-      <div className="flex gap-10 ">
-        {links.map((link) => (
-          <Links item={link} key={link.title}/>
-        ))}
-      </div>
-    
+    <div className="flex gap-10">
+      {links.map((link) => (
+        <Links item={link} key={link.title}/>
+      ))}
     </div>
-  )
+  );
 }
 
-export default Navlink
+export default Navlink;

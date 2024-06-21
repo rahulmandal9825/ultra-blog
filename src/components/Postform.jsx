@@ -58,7 +58,7 @@ const Postform =  ({userId}) => {
   }
 
     return (
-    <div className='bg-blue-300/10  flex flex-col p-5 rounded-xl shadow-2xl w-[50%]'>
+    <div className='bg-blue-300/10  flex flex-col p-5 rounded-xl shadow-2xl '>
       <div className='flex p-5 gap-5'>
         <SingleImageDropzone
         width={100}

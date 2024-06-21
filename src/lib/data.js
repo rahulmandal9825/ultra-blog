@@ -2,15 +2,32 @@
 import { Post, User } from "./models";
 import { connectToDb } from "./utils"
 
-export const getPosts = async () =>{
+export const getPosts = async ({
+    query,
+    page=1,
+    limit =10
+}) =>{
     try {
-        connectToDb();
-    const posts = await Post.find();
-    return posts;
+       connectToDb();
+       console.log({query});
+       const skip = (page - 1) * limit
+
+       
+      const posts = await Post.find({
+        title: { $regex: query, $options: 'i' },
+
+      })
+        .limit(limit)
+        .skip(skip);
+
+console.log(posts);
+        return posts;
     } catch (error) {
         console.log(error);
         return  { error: "Failed to fetch posts!" }
 }
+
+  
 }
 
 export const getpost = async (slug) =>{
@@ -39,7 +56,6 @@ export const getUsers = async() => {
     try {
         connectToDb();
         const user = await User.find();
-        console.log(user);
         return user;
     } catch (error) {
         console.log(error);
